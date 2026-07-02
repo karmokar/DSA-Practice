@@ -1,0 +1,11 @@
+class Solution {
+  countNodes(head) {
+let current=head;
+      let total =0;
+      while (current) {
+          total++;
+          current=current.next;
+      }
+    return total;
+  }
+}
