@@ -1,0 +1,16 @@
+class Solution {
+  deleteNode(head, target) {
+    if (target == head) {
+      head = target.next;
+    }
+    if (target.prev != null) {
+      target.prev.next = target.next;
+    }
+    if (target.next != null) {
+      target.next.prev = target.prev;
+    }
+    target.next = null;
+    target.prev = null;
+    return head; // default empty value
+  }
+}
