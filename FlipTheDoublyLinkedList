@@ -1,0 +1,16 @@
+class Solution {
+  flipDoublyLinkedList(head) {
+    let current = head;
+    let last = null;
+    while (current !== null) {
+      const temp = current.next;
+      current.next = current.prev;
+      current.prev = temp;
+
+      last = current;
+      current = temp;
+    }
+
+    return last;
+  }
+}
